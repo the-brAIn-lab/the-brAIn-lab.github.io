@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'main/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}brAIn_lab{% endblock %}</title>
+    
+    </head>
+    <body>
+        {% block toprow %}
+        <div class="top-row-spacing">
+            <div class="left-top-row">
+                <a href="{% url 'home' %}">brAIn lab</a>
+            </div>
+            <div class="right-top-row">
+                <a href="{% url 'projects' %}">projects</a>
+                <a href="{% url 'publications' %}">publications</a>
+                <a href="{% url 'software' %}">Software</a>
+                <a href="{% url 'team' %}">Team</a>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block content %}{% endblock %}
+
+        {% block contact %}
+        <div class="bottom-contact-container">
+            <h4>Contact Us!</h4>
+            <p>
+                University Drive<br>
+                (406) 333-3333<br>
+                brAIn_lab@gmail.com
+            </p>
+        </div>
+        {% endblock %}
+    </body>
+</html>
