@@ -4,13 +4,16 @@
     display: grid;
     grid-template-columns: 1.25fr 5fr;
     width: 100%;
+    top: 0;
+    z-index: 10;
     height: 28px;
     padding: 10px;
     border-bottom: 1px solid black;
     border-radius: 10px;
     margin-bottom: 0;
     font-family: Monaco;
-    background: #588c81;
+    background-color: rgba(88, 140, 129, 0.9);;
+    position: sticky;
 }
 
 .left-top-row {
@@ -54,18 +57,35 @@
 .page-grid {
     display: grid;
     grid-template-columns: 1.25fr 5fr;
+    min-height: 100vh;
+    min-width: 100vw;  
+    align-items: stretch;   
 }
 
 .logo-section-sticky {
     position: sticky;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
-    grid: 1;
-    top: 0;
-    height: 100%;
+    top: 54px;
+    z-index: 5;
+    grid-row: 1 / -1;
+    height: auto;
+    top: 54px;
+    position: sticky;
+    height: fit-content;
+    top: 54px;
+    position: sticky;
     justify-content: center;
     align-items: center;
     padding-top: 10%;
+    background-image: url("../images/blurry-gradient-haikei.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .logo-image {
@@ -105,7 +125,10 @@
 
 .bottom-contact-container {
     height: 130px;
-    background: #a1c2d8;
+    background-image: url("../images/blurry-gradient-haikei.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-top: 15px;
     width: 100vw;
     margin-right: 0;
@@ -127,7 +150,6 @@
 }
 
 .project-container-1 {
-    background: #d9d9d980;
     border-radius: 15px;
     height: 150px;
     width: 100%;
@@ -135,10 +157,10 @@
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .project-container-2 {
-    background: #bfd4e2;
     border-radius: 15px;
     height: 150px;
     width: 100%;
@@ -146,6 +168,7 @@
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .italic-title {
@@ -162,6 +185,8 @@
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .publications-container-2 {
@@ -172,6 +197,8 @@
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* ------- Software Page -------- */
@@ -184,6 +211,8 @@
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .software-container-2 {
@@ -194,28 +223,58 @@
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* ------- Team Page ------- */
 
 .supervisor-container {
-    background: #bfd4e2;
+    border-bottom: 4px;
     border-radius: 15px;
-    height: 200px;
+    height: 300px;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
+    padding-left: 10px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    gap: 1em;
 }
 
 .team-container-1 {
-    background: #d9d9d980;
-    border-radius: 15px;
-    height: 200px;
+    height: 275px;
     width: 100%;
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.picture-container {
+    padding: 4px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 15%;
+    height: auto;
+    border-radius: 3px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.picture-description {
+  font-size: 1rem;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column; 
 }
 
 .team-container-2 {
@@ -223,18 +282,33 @@
     border-radius: 15px;
     height: 200px;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     grid-column: 2;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* ------- General CSS Calls ------- */
 
 body {
     font-family: sans-serif;
-    background: #bfd4e2;
     color: black;
+    background-color: #F7F7F7,;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #5d5d5d, transparent);
+  margin: 1.5em 0;
+  grid-column: 2;
+} 
 
 a {
     color: black;
