@@ -1,18 +1,19 @@
 /* ------- Top Navigation Bar ------- */
 
 .top-row-spacing {
+    color: rgba(64, 64, 64, 0.3);
     display: grid;
     grid-template-columns: 1.25fr 5fr;
     width: 100%;
+    background-color: white;
     top: 0;
     z-index: 10;
     height: 4%;
-    padding: 10px;
+    padding-top: .5%;
+    padding-bottom: .5%;
     border-bottom: 1px solid black;
-    border-radius: 10px;
     margin-bottom: 0;
     font-family: Monaco;
-    background-color: rgba(88, 140, 129, 0.9);
     position: sticky;
     overflow-x: auto;
     white-space: nowrap;
@@ -29,6 +30,7 @@
 }
 
 .right-top-row {
+    color: rgba(64, 64, 64, 0.3);
     grid-column: 2;
     gap: 5%;
     padding-left: 1%;
@@ -85,7 +87,6 @@
     display: flex;
     top: 54px;
     z-index: 5;
-    top: 54px;
     justify-content: flex-start;
     padding-top: 0;
 }
@@ -98,8 +99,8 @@
 
 .logo-writing {
     padding-top: 15px;
-    align-items: left;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     padding: 10%;
     height: auto;
     display: flex;
@@ -125,7 +126,7 @@
 }
 
 .bottom-contact-container {
-    height: 10%;
+    height: 100%;
     background-image: url("../images/blurry-gradient-haikei.png");
     background-size: cover;
     background-position: center;
@@ -150,13 +151,24 @@
 
 .project-container-1 {
     border-radius: 15px;
-    height: 150px;
+    height: auto;
     width: 100%;
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+}
+
+.project-picture{
+    padding: 4px;
+    width: 20%;
+    border-bottom: solid black 1px;
+    height: auto;
+    border-radius: 1px;
+    object-fit: contain;
+    object-fit: cover;
+    flex-shrink: 0;  
 }
 
 .project-container-2 {
@@ -177,15 +189,28 @@
 /* ------- Publications Page ------- */
 
 .publications-container-1 {
-    background: #bfd4e2;
-    border-radius: 15px;
-    height: 200px;
+    height: auto;
     width: 100%;
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+    margin-left: 10px;
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.publications-picture{
+    padding: 4px;
+    width: 30%;
+    border-bottom: solid black 1px;
+    height: auto;
+    border-radius: 1px;
+    object-fit: contain;
+    object-fit: cover;
+    flex-shrink: 0;  
 }
 
 .publications-container-2 {
@@ -203,15 +228,32 @@
 /* ------- Software Page -------- */
 
 .software-container-1 {
-    background: #bfd4e2;
-    border-radius: 15px;
-    height: 200px;
+    height: auto;
     width: 100%;
     padding: 10px;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+    margin-left: 10px;
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.software-title {
+    display: flex;
+}
+
+.software-picture{
+    padding: 4px;
+    width: 60%;
+    border-bottom: solid black 1px;
+    height: auto;
+    border-radius: 1px;
+    object-fit: contain;
+    object-fit: cover;
+    flex-shrink: 0;  
 }
 
 .software-container-2 {
@@ -229,17 +271,17 @@
 /* ------- Team Page ------- */
 
 .supervisor-container {
-    border-bottom: 4px;
-    border-radius: 15px;
     height: auto;
     width: 100%;
-    padding: 5px;
-    padding-left: 10px;
+    padding: 10px;
     grid-column: 2;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+    margin-left: 10px;
     gap: 1em;
+    display: flex;
+    align-items: flex-start;
 }
 
 .team-container-1 {
@@ -321,5 +363,11 @@ a {
 a:hover {
     transform: scale(1.05);
     transition-duration: 0.3s;
+}
+
+.semi-opaque {
+    color: rgba(64, 64, 64, 0.9);
+    margin: 0;
+    height: 4%;
 }
 
