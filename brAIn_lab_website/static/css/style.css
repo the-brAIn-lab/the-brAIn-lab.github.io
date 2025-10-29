@@ -77,7 +77,8 @@
     display: flex;
     flex-direction: column;
     flex: 5;
-    margin-right: 3%
+    margin-right: 3%;
+    margin-left: 3%;
 }
 
 .logo-section-sticky {
@@ -89,7 +90,8 @@
     display: flex;
     top: 54px;
     z-index: 5;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     padding-top: 0;
 }
 
@@ -103,6 +105,7 @@
   .logo-image {
     width: 60%;   /* shrink on phones */
     max-width: 300px;
+    align-items: center;
   }
 }
 
@@ -310,12 +313,19 @@
     border: 2px solid #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     width: 70%;
-    max-width: 175px;
     height: auto;
+    max-width: 175px;
     border-radius: 3px;
     object-fit: contain;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .picture-container {
+    width: 40%;   /* shrink on phones */
+    max-width: 150px;
+  }
 }
 
 .picture-description {
