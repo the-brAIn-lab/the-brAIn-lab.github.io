@@ -111,11 +111,30 @@
 
 .logo-writing {
     padding-top: 15px;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 10%;
     height: auto;
     display: flex;
+}
+
+.sticky-links {
+    flex-direction: row;
+    padding-top: 15px;
+    align-items: center;
+    padding: 10%;
+    height: auto;
+    display: flex;
+    transition: transform 0.2s ease;
+    display: inline-block; 
+}
+
+.mini-logo{
+    min-width: 25px;
+    width: 15%;
+    height: auto;
+    margin-right: 7%;
 }
 
 .image-home {
@@ -138,17 +157,9 @@
 
 .bottom-contact-container {
     height: 100%;
-    background-image: url("../images/blurry-gradient-haikei.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 15px;
-    width: 100vw;
-    margin-right: 0;
-    padding: 10px;
+    margin: 3%;
     border-radius: 4px;
     z-index: -1;
-    border-top: 1px solid black;
 }
 
 /* ------- Projects Page ------- */
@@ -169,6 +180,12 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .project-container-1 {
+    height: auto;
+  }
 }
 
 .project-picture{
@@ -213,6 +230,19 @@
     align-items: flex-start;
 }
 
+@media (max-width: 600px) {
+  .publications-container-1 {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    grid-column: 2;
+    margin: 3%;
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
 .publications-picture{
     padding: 4px;
     width: 30%;
@@ -240,12 +270,9 @@
 .software-container-1 {
     height: auto;
     width: 100%;
-    padding: 10px;
+    padding: 1%;
     grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 3%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
@@ -285,10 +312,7 @@
     width: 100%;
     padding: 10px;
     grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 3%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
@@ -299,13 +323,16 @@
     width: 100%;
     padding: 10px;
     grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 3%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .team-container-1 {
+    height: auto;
+  }
 }
 
 .picture-container {
@@ -380,6 +407,15 @@ a {
 a:hover {
     transform: scale(1.05);
     transition-duration: 0.3s;
+}
+
+.sticky-links a {
+  transition: transform 0.3s ease;
+}
+
+.sticky-links a:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
 }
 
 .semi-opaque {
