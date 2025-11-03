@@ -276,21 +276,31 @@
     gap: 1em;
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 .software-title {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5rem;
+    border-bottom: solid black 1px;
 }
 
 .software-picture{
     padding: 4px;
-    width: 60%;
-    border-bottom: solid black 1px;
+    width: 30%;
     height: auto;
     border-radius: 1px;
     object-fit: contain;
     object-fit: cover;
     flex-shrink: 0;  
+}
+
+.software-description {
+    display: flex;
+    flex-direction: column;
 }
 
 .software-container-2 {
@@ -407,15 +417,6 @@ a {
 a:hover {
     transform: scale(1.05);
     transition-duration: 0.3s;
-}
-
-.sticky-links a {
-  transition: transform 0.3s ease;
-}
-
-.sticky-links a:hover {
-  transform: scale(1.05);
-  transition-duration: 0.3s;
 }
 
 .semi-opaque {
