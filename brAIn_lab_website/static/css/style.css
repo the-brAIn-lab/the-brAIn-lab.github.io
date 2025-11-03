@@ -2,16 +2,14 @@
 
 .top-row-spacing {
     color: rgba(64, 64, 64, 0.3);
-    display: grid;
-    grid-template-columns: 1.25fr 5fr;
-    width: 100vw;
+    display: flex;
     margin-right: 0;
     background-color: #F7F7F7;
     top: 0;
     z-index: 10;
     height: 4%;
-    padding-top: .5%;
-    padding-bottom: .5%;
+    padding-top: .75%;
+    padding-bottom: .75%;
     margin-bottom: 0;
     font-family: Monaco;
     position: sticky;
@@ -21,8 +19,8 @@
 }
 
 .left-top-row {
-    grid-column: 1;
     display: flex;
+    flex: 1.25;
     justify-content: center;
     align-items: center;
     font-family: Monaco;
@@ -32,13 +30,15 @@
 .right-top-row {
     color: rgba(64, 64, 64, 0.3);
     overflow-x: auto;
-    grid-column: 2;
+    flex: 5;
     gap: 8%;
-    padding-left: 1%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
     font-family: Monaco;
+    padding-left: 3%;
 }
 
 .top-row-bttn {
@@ -140,15 +140,14 @@
 .image-home {
     height: auto;
     width: 100%;
-    grid-column: 2;
+    flex: 5;
     border-radius: 4px;
-    margin-right: 10px; 
-    margin-bottom: 10px; 
-    margin-top: 12px;
+    margin: 1.5%;
 }
 
 .about-home {
-    grid-column: 2;   
+    flex: 5;  
+    margin: 1.5%;
     padding: 1%;
     height: 200px;
     margin-right: 10px;  
@@ -172,14 +171,9 @@
 }
 
 .project-container-1 {
-    border-radius: 15px;
     height: auto;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    flex: 5;
+    margin: 1.5%;
 }
 
 @media (max-width: 600px) {
@@ -193,14 +187,12 @@
     width: 20%;
     border-bottom: solid black 1px;
     height: auto;
-    border-radius: 1px;
     object-fit: contain;
     object-fit: cover;
     flex-shrink: 0;  
 }
 
 .project-container-2 {
-    border-radius: 15px;
     height: 150px;
     width: 100%;
     padding: 10px;
@@ -218,13 +210,8 @@
 
 .publications-container-1 {
     height: auto;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+    flex: 5;
+    margin: 1.5%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
@@ -269,10 +256,8 @@
 
 .software-container-1 {
     height: auto;
-    width: 100%;
-    padding: 1%;
-    grid-column: 2;
-    margin: 3%;
+    flex: 5;
+    margin: 1.5%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
@@ -319,10 +304,8 @@
 
 .supervisor-container {
     height: auto;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-    margin: 3%;
+    flex: 5;
+    margin: 1.5%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
@@ -330,10 +313,9 @@
 
 .team-container-1 {
     height: auto;
-    width: 100%;
     padding: 10px;
-    grid-column: 2;
-    margin: 3%;
+    flex: 5;
+    margin: 1.5%;
     gap: 1em;
     display: flex;
     align-items: flex-start;
