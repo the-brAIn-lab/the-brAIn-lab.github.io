@@ -66,6 +66,7 @@
 
 @media (max-width: 600px) {
   .page-grid {
+    display: flex;
     flex-direction: column;  
   }
 }
@@ -80,9 +81,10 @@
 
 @media (max-width: 600px) {
   .left-column {
-    flex: none;
-    display: flex;  
+    flex: none; 
     flex-direction: row;
+    margin: 2%;
+    padding: 2%;
   }
 }
 
@@ -117,6 +119,20 @@
     padding-top: 0;
 }
 
+@media (max-width: 600px) {
+  .logo-section-sticky {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-top: 0;
+    border-radius: 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+}
+
 .logo-image {
     width: 100%;
     height: auto;
@@ -125,9 +141,10 @@
 
 @media (max-width: 600px) {
   .logo-image {
-    width: 60%;   /* shrink on phones */
+    width: 35%;   /* shrink on phones */
     max-width: 300px;
     align-items: center;
+    margin: 0;
   }
 }
 
@@ -139,6 +156,17 @@
     padding: 10%;
     height: auto;
     display: flex;
+}
+
+@media (max-width: 600px) {
+  .logo-writing {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 
 .sticky-links {
@@ -157,6 +185,13 @@
     width: 15%;
     height: auto;
     margin-right: 7%;
+}
+
+@media (max-width: 600px) {
+  .mini-logo{
+    width: 20px;
+    margin-right: 3%;
+  }
 }
 
 .image-home {
@@ -181,6 +216,16 @@
     margin: 3%;
     border-radius: 4px;
     z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .bottom-contact-container {
+    margin: 1%;
+    padding: 1%;
+    align-items: left;
+    text-align: left;
+    background-color: #f9f9f9;
+  }
 }
 
 /* ------- Projects Page ------- */
