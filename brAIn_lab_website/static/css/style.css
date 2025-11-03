@@ -10,7 +10,6 @@
     height: 4%;
     padding-top: .75%;
     padding-bottom: .75%;
-    margin-bottom: 0;
     font-family: Monaco;
     position: sticky;
     overflow-x: auto;
@@ -73,12 +72,27 @@
     min-height: 0;
 }
 
+@media (max-width: 600px) {
+  .left-column {
+    display: flex;  
+    flex-direction: row;
+  }
+}
+
 .right-column {
     display: flex;
     flex-direction: column;
     flex: 5;
     margin-right: 3%;
     margin-left: 3%;
+}
+
+@media (max-width: 600px) {
+  .right-column {
+    margin-right: 1%;
+    margin-left: 1%;
+    flex-direction: column;
+  }
 }
 
 .logo-section-sticky {
@@ -93,6 +107,15 @@
     justify-content: center;
     align-items: center;
     padding-top: 0;
+}
+
+@media (max-width: 600px) {
+  .logo-section-sticky {
+    position: static;  
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .logo-image {
@@ -406,4 +429,3 @@ a:hover {
     margin: 0;
     height: 4%;
 }
-
