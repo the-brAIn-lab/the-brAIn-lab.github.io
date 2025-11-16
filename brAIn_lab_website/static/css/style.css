@@ -295,6 +295,32 @@
 
 /* ------- Publications Page ------- */
 
+.paper-container {
+    height: auto;
+    flex: 5;
+    margin: 1.5%;
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.paper-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-title {
+    height: auto;
+    flex: 5;
+    margin: 1.5%;
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
 .publications-container-1 {
     height: auto;
     flex: 5;
@@ -319,9 +345,9 @@
 
 .publications-picture{
     padding: 4px;
-    width: 30%;
+    width: 65%;
     height: auto;
-    border-radius: 1px;
+    border-radius: 3px;
     object-fit: contain;
     object-fit: cover;
     flex-shrink: 0;  
@@ -486,6 +512,13 @@ a {
 a:hover {
     transform: scale(1.05);
     transition-duration: 0.3s;
+}
+
+a.nice-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 .semi-opaque {
