@@ -334,9 +334,9 @@
   .publications-container-1 {
     height: auto;
     width: 100%;
-    padding: 10px;
-    grid-column: 2;
+    flex: 5;
     margin: 3%;
+    padding-right: 5px;
     gap: 1em;
     display: flex;
     align-items: flex-start;
@@ -351,6 +351,13 @@
     object-fit: contain;
     object-fit: cover;
     flex-shrink: 0;  
+}
+
+@media (max-width: 600px) {
+  .publications-picture{
+    width: 55%;   /* shrink on phones */
+    max-width: 300px;
+  }
 }
 
 .publications-container-2 {
