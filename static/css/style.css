@@ -499,3 +499,10 @@ a.software-link:hover {
     font-size: 15px;
   }
 }
+
+.right-top-row a[aria-current="page"] .semi-opaque {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
