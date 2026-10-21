@@ -506,3 +506,9 @@ a.software-link:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
+
+.text-block h3 a {
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
