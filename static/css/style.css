@@ -10,7 +10,7 @@
     height: 4%;
     padding-top: .75%;
     padding-bottom: .75%;
-    font-family: Monaco;
+    font-family: Monaco, Menlo, Consolas, monospace;
     position: sticky;
     overflow-x: auto;
     white-space: nowrap;
@@ -22,7 +22,7 @@
     flex: 1.25;
     justify-content: center;
     align-items: center;
-    font-family: Monaco;
+    font-family: Monaco, Menlo, Consolas, monospace;
     font-weight: bold;
 }
 
@@ -36,25 +36,8 @@
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    font-family: Monaco;
+    font-family: Monaco, Menlo, Consolas, monospace;
     padding-left: 3%;
-}
-
-.top-row-bttn {
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    background: none;
-}
-
-.top-row-bttn:hover {
-    transform: scale(1.05);
-    transition-duration: 0.3s;
-}
-
-.hline-top {
-    height: .03px;
 }
 
 /* ------- Main Body Content ------- */
@@ -250,13 +233,6 @@
 
 /* ------- Projects Page ------- */
 
-.overview-projects {
-    height: 150px;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-}
-
 .project-container-1 {
     height: auto;
     flex: 5;
@@ -267,26 +243,6 @@
   .project-container-1 {
     height: auto;
   }
-}
-
-.project-picture{
-    padding: 4px;
-    width: 20%;
-    border-bottom: solid black 1px;
-    height: auto;
-    object-fit: contain;
-    object-fit: cover;
-    flex-shrink: 0;  
-}
-
-.project-container-2 {
-    height: 150px;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
 }
 
 .italic-title {
@@ -346,35 +302,6 @@
     display: flex;
     align-items: flex-start;
   }
-}
-
-.publications-picture{
-    padding: 4px;
-    width: 65%;
-    height: auto;
-    border-radius: 3px;
-    object-fit: contain;
-    object-fit: cover;
-    flex-shrink: 0;  
-}
-
-@media (max-width: 600px) {
-  .publications-picture{
-    width: 55%;   /* shrink on phones */
-    max-width: 300px;
-  }
-}
-
-.publications-container-2 {
-    background: #d9d9d980;
-    border-radius: 15px;
-    height: 200px;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
 }
 
 .poster {
@@ -444,18 +371,6 @@
     flex-direction: column;
 }
 
-.software-container-2 {
-    background: #d9d9d980;
-    border-radius: 15px;
-    height: 200px;
-    width: 100%;
-    padding: 10px;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-
 /* ------- Team Page ------- */
 
 .supervisor-container {
@@ -503,25 +418,9 @@
   }
 }
 
-.picture-description {
-  font-size: 1rem;
-}
-
 .text-block {
   display: flex;
   flex-direction: column; 
-}
-
-.team-container-2 {
-    background: #bfd4e2;
-    border-radius: 15px;
-    height: 200px;
-    width: 100%;
-    padding: 5px;
-    grid-column: 2;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
 }
 
 /* ------- General CSS Calls ------- */
@@ -568,4 +467,48 @@ a.nice-link {
     color: rgba(64, 64, 64, 0.9);
     margin: 0;
     height: 4%;
+}
+
+a.software-link {
+    color: #2b6cb0;
+    transition: color 0.2s ease;
+}
+
+a.software-link:hover {
+    color: #1e4e8c;
+}
+
+.bottom-contact-container a {
+    font-size: inherit;
+}
+
+@media (max-width: 600px) {
+  .left-top-row {
+    flex: none;
+    padding: 0 0.75em;
+  }
+
+  .right-top-row {
+    flex: 1;
+    gap: 1em;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .top-row-spacing a {
+    font-size: 15px;
+  }
+}
+
+.right-top-row a[aria-current="page"] .semi-opaque {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.text-block h3 a {
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }

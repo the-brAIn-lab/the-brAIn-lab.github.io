@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - brAIn_lab</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="brAIn_lab">
+    <meta property="og:title" content="{{ page.title }} - brAIn_lab">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="https://the-brain-lab.github.io{{ page.url }}">
+    <meta property="og:image" content="https://the-brain-lab.github.io/static/images/preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- Top row / Navbar -->
+    <div class="top-row-spacing">
+        <div class="left-top-row">
+            <a href="index.html"><p class="semi-opaque">brAIn lab</p></a>
+        </div>
+        <div class="right-top-row">
+            {%- assign nav = "projects,publications,software,team" | split: "," %}
+            {%- for name in nav %}
+            {%- assign path = "/" | append: name | append: ".html" %}
+            <a href="{{ name }}.html"{% if page.url == path %} aria-current="page"{% endif %}><p class="semi-opaque">{{ name }}</p></a>
+            {%- endfor %}
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="page-grid">
+        <div class="left-column">
+            <div class="logo-section-sticky">
+                <div class="logo-writing">
+                    <p> <b>brAIn_lab</b><br>
+                        <br>
+                        Neuroscience Research<br>
+                        and Machine Learning<br>
+                        Lab<br>
+                        <br>
+                        University of Montana<br>
+                    </p>
+                    <div class="sticky-links">
+                        <img src="static/images/github-mark.svg" alt="" class="mini-logo">
+                        <a href="https://github.com/the-brAIn-lab">GitHub</a>
+                    </div>
+                </div>
+                <img src="static/images/web/brain_logo.webp" alt="brAIn lab logo" class="logo-image">
+            </div>
+        </div>
+
+        <div class="right-column">
+{{ content }}
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Contact -->
+    <div class="bottom-contact-container">
+        <h4>Contact Us!</h4>
+        <p>
+            32 Campus Dr.<br>
+            Missoula, MT 59812<br>
+            <a href="mailto:lucy.owen@mso.umt.edu">lucy.owen@mso.umt.edu</a>
+        </p>
+    </div>
+
+</body>
+</html>
